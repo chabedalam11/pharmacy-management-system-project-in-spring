@@ -9,6 +9,7 @@
     <property name="hibernate.connection.password">apcl123456</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <mapping resource="com/chabed/hibernate/pojo/UserRoles.hbm.xml"/>
+    <mapping resource="com/chabed/hibernate/pojo/T30004.hbm.xml"/>
     <mapping resource="com/chabed/hibernate/pojo/Users.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

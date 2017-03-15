@@ -10,7 +10,7 @@
 		
 		<intercept-url pattern="/admin**" access="hasRole('ROLE_ADMIN')" />
 		
-		<form-login login-page="/login" default-target-url="/helloworld"
+		<form-login login-page="/login" default-target-url="/admin"
 			authentication-failure-url="/loginError" />
 			
 		<logout logout-success-url="/logout" logout-url="/j_spring_security_logout" />

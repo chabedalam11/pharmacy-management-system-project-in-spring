@@ -50,7 +50,7 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-edit"></i> Initialization <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
                             <li>
-                                <a href="#">Generic Code Initialization</a>
+                                <a href="adminT30004GenCodeIniti.htm">Generic Code Initialization</a>
                             </li>
                             <li>
                                 <a href="#">Teade code Initialization</a>

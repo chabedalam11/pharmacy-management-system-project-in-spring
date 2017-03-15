@@ -13,10 +13,13 @@ import org.springframework.web.servlet.ModelAndView;
 import com.chabed.hibernate.dao.UserDAO;
 import com.chabed.hibernate.db.HibenateConnection;
 import com.chabed.hibernate.pojo.Users;
+import com.chabed.spring.other.ProgramSession;
 
 
 @Controller
 public class LoginOutController {
+	
+	
 
 	/*@RequestMapping("/helloworld")
 	public ModelAndView hello(ModelMap model,Principal principal) {
@@ -27,19 +30,19 @@ public class LoginOutController {
 		return new ModelAndView("hello", "userName", loggedInUserName);
 	}*/
 	
-	@RequestMapping("/adminp2")
-	public String hello2(ModelMap model,Principal principal) {
-		System.out.println("call p2 page");
-
-		return "p2";
-	}
+	
 	
 	@RequestMapping("/admin")
-	public ModelAndView helloAdmin(ModelMap model,Principal principal) {
+	public ModelAndView helloAdmin(Principal principal) {
 		System.out.println("call admin page");
-
 		String loggedInUserName=principal.getName();
-		new HibenateConnection("open");
+		
+		// creating session if necessary 
+		if(ProgramSession.sesssionControll==0){
+			new HibenateConnection("open");
+			ProgramSession.sesssionControll++;
+		}
+		
 		return new ModelAndView("adminIndex", "userName", loggedInUserName);
 	}
 
@@ -73,6 +76,7 @@ public class LoginOutController {
 		System.out.println("call login out method");
 		//model.addAttribute("error", "true");
 		new HibenateConnection("close");
+		ProgramSession.sesssionControll=0;
 		return "login";
 	}
 	

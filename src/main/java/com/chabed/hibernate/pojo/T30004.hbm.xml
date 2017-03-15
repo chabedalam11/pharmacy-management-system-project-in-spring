@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 15, 2017 3:30:59 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.chabed.hibernate.pojo.T30004" table="t30004" catalog="spring" optimistic-lock="version">
+        <id name="TGenCode" type="string">
+            <column name="T_GEN_CODE" length="18" />
+            <generator class="assigned" />
+        </id>
+        <property name="TEntryUser" type="string">
+            <column name="T_ENTRY_USER" length="60" />
+        </property>
+        <property name="TEntryDate" type="date">
+            <column name="T_ENTRY_DATE" length="10" />
+        </property>
+        <property name="TUpdUser" type="string">
+            <column name="T_UPD_USER" length="12" />
+        </property>
+        <property name="TUpdDate" type="date">
+            <column name="T_UPD_DATE" length="10" />
+        </property>
+        <property name="TLang1Name" type="string">
+            <column name="T_LANG1_NAME" length="300" />
+        </property>
+        <property name="TLang2Nam" type="string">
+            <column name="T_LANG2_NAM" length="300" />
+        </property>
+        <property name="TDrugTherapClsCode" type="string">
+            <column name="T_DRUG_THERAP_CLS_CODE" length="36" />
+        </property>
+        <property name="TActiveFlag" type="string">
+            <column name="T_ACTIVE_FLAG" length="3" />
+        </property>
+        <property name="TControlDrug" type="string">
+            <column name="T_CONTROL_DRUG" length="3" />
+        </property>
+        <property name="TDrugUse" type="string">
+            <column name="T_DRUG_USE" length="4000" />
+        </property>
+    </class>
+</hibernate-mapping>
