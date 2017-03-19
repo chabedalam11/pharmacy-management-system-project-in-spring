@@ -1,6 +1,6 @@
 <jsp:include page="layout/header.jsp" />
 <jsp:include page="layout/topNav.jsp" />
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 
 	<!-- page-wrapper -->
@@ -68,7 +68,7 @@
 							  <center>
 							  <div class="checkbox">
 							    <label>
-							      <input type="checkbox" name="TActiveFlag" value="1"> active
+							      <input type="checkbox" name="TActiveFlag" value="1" checked="checked"> active
 							    </label>
 							  </div>
 							   </center>
@@ -89,27 +89,46 @@
               <!-- // Modal for save generic name -->
               
               
-              <!-- generic code save row -->
+              <!-- generic code showing table row -->
               <div class="row">
                     <div class="col-lg-12">
                         <div class="alert alert-info">
                         
-                        	<!-- save row -->
-                            <div class="row">
-                            	<div class="col-lg-6">
-                            		
-                            	
-									
-									
-                            		
-                            	</div>
-                            </div>
-                            <!-- //save row -->
+                        	<table class="table table-condensed">
+                        		<thead>
+                       			<tr class="success">
+                       			  <td><b>GENERIC CODE</b></td>
+								  <td><b>GENERIC NAME</b></td>
+								  <td><b>ACTIVE FLAG</b></td>
+                       			</tr>
+                        		</thead>
+                        		
+                        	<!-- show database table in table row -->
+								<c:forEach var="t30004" items="${t30004}">
+					            <tr class="info">
+					                <td>${t30004.getTGenCode()}</td>
+					               	<td contenteditable='true'>${t30004.getTLang2Nam()}</td>
+					               	<td>
+									<c:choose>
+									  <c:when test="${t30004.getTActiveFlag() eq 1}">
+										 <input type="checkbox" name="TActiveFlag" value="1" checked="checked"> active
+									  </c:when>
+									  
+									  <c:otherwise>
+										 <input type="checkbox" name="TActiveFlag" value="1"> active
+									  </c:otherwise>
+									</c:choose>
+					               	</td>
+					            </tr>
+					            </c:forEach>
+					        <!-- //show database table in table row -->
+					        
+							</table>
                             
                         </div>
                     </div>
               </div>
-              <!-- // generic code save row -->
+              <!-- // generic code showing table -->
               
 	 	</div>
 	    <!-- //container-fluid -->
