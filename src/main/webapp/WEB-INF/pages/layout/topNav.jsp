@@ -53,7 +53,7 @@
                                 <a href="adminT30004GenCodeIniti.htm">Generic Code Initialization</a>
                             </li>
                             <li>
-                                <a href="#">Teade code Initialization</a>
+                                <a href="adminIndex.htm">Teade code Initialization</a>
                             </li>
                         </ul>
                     </li>

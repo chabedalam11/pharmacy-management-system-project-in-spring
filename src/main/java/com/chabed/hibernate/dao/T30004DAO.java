@@ -20,7 +20,34 @@ public class T30004DAO extends HibenateConnection{
 		try{
 			session.save(t30004);
 			session.beginTransaction().commit();
-			log.info("generic code Save");
+			log.info("GENERIC CODE "+t30004.getTGenCode()+" SAVE");
+			return true;
+		}catch(Exception e){
+			log.error(e);
+			return false;
+		}
+	}
+	
+	public boolean updateGenericCode(T30004 t30004){
+		session.clear();
+		try{
+			session.update(t30004);
+			session.beginTransaction().commit();
+			log.info("GENERIC  CODE "+t30004.getTGenCode()+" UPDATE");
+			return true;
+		}catch(Exception e){
+			log.error(e);
+			return false;
+		}
+	}
+	
+	public boolean deleteGenericCode(T30004 t30004){
+		session.clear();
+		
+		try{
+			session.delete(t30004);
+			session.beginTransaction().commit();
+			log.info("GENERIC CODE "+t30004.getTGenCode()+" DELETE");
 			return true;
 		}catch(Exception e){
 			log.error(e);
@@ -39,9 +66,6 @@ public class T30004DAO extends HibenateConnection{
 	
 	public List<T30004> getT30004FullTable(){
 		List<T30004> t30004=session.createCriteria(T30004.class).list();
-		for (T30004 t300042 : t30004) {
-			log.info(t300042.getTGenCode()+"\t"+t300042.getTLang2Nam());
-		}
 		return t30004;
 	}
 	

@@ -63,5 +63,7 @@
             $("#loginMsg").html("");
         });
         
-        
+        $("#genericName").keyup(function(){
+            $("#MSG").html("");
+        });
     });
