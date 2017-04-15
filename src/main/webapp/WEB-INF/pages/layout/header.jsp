@@ -6,7 +6,7 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Admin Page</title>
+		<title>Admin Pages</title>
 		
 		
 		<!-- Bootstrap Core CSS -->
@@ -24,25 +24,24 @@
 		
 		   
 		    
-		    <!-- new add -->
-		    
-			
-		    
-		    
-		    
-		    
-		    
-		    
+		    <!-- js file -->
 		    
 		    <script type="text/javascript" src="resources/js/jquery-1.12.4.js"></script>
 			<script type="text/javascript" src="resources/js/jquery.dataTables.min.js"></script>
 			<script type="text/javascript" src="resources/js/dataTables.bootstrap.min.js"></script>
 
-
+			<!-- //js file -->
+			
+			<!-- own js file -->
+			
+			<script type="text/javascript" src="resources/js/custom.js"></script>
+			
+			<!-- js file -->
+			
 			<script type="text/javascript">
-			$(document).ready(function() {
-			    $('#example').DataTable();
-			} );
+				$(document).ready(function() {
+				    $('#example').DataTable();
+				} );
 			</script>
 		
 </head>

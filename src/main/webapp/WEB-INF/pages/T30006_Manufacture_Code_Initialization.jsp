@@ -18,18 +18,18 @@
                 <div class="row">
                     <div class="col-lg-5">
                         <h3 class="page-header">
-                             <i class="fa fa-stethoscope" aria-hidden="true"></i>&emsp; Generic Code Initialization
+                             <i class="fa fa-stethoscope" aria-hidden="true"></i>&emsp; Manufacture Code Initialization
                         </h3>
                     </div>
                     <div class="col-lg-4" style="margin-top: 30px">
                        
-						  <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add Generic Code</button>
+						  <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#myModal">Add Manufacture Code</button>
 						
                     </div>
                     <div class="col-lg-3" style="margin-top: 30px">
                         
 						  <div class="form-group">
-						    <input type="text" class="form-control" id="searchBox" onkeyup="filterTableRow()"  placeholder="Search by generic name">
+						    <input type="text" class="form-control" id="searchBox" onkeyup="filterTableRow()"  placeholder="Search by manufacture name">
 						  </div>
 						  
 						
@@ -68,12 +68,12 @@
 				    <div class="modal-content">
 				      <div class="modal-header">
 				        <button type="button" class="close" data-dismiss="modal">&times;</button>
-				        <center><h4 class="modal-title">Add Generic Code</h4></center>
+				        <center><h4 class="modal-title">Add Manufacture Code</h4></center>
 				      </div>
 				      <div class="modal-body">
 							<form action="saveGenericCode" method="post">
 							  <div class="form-group">
-							    <label for="exampleInputEmail1">Generic </label>
+							    <label for="exampleInputEmail1">Type Generic </label>
 							    <input type="text" name="TLang2Nam" class="form-control" placeholder="" required="required">
 							  </div>
 							  
@@ -104,8 +104,8 @@
               <div class="row">
               
               
-              <div class="col-lg-4" style="padding-right: 0px"> <div class="alert alert-info"><b>GENERIC CODE</b>&emsp; &emsp;<i style="cursor: pointer;" onclick="sortTable(0)" class="fa fa-sort-amount-desc" aria-hidden="true"></i></div></div>
-              <div class="col-lg-4" style="padding-left: 0px;padding-right: 0px"> <div class="alert alert-info"><b>GENERIC NAME </b>&emsp; &emsp;<i style="cursor: pointer;" onclick="sortTable(1)" class="fa fa-sort-amount-desc" aria-hidden="true"></i></div></div>
+              <div class="col-lg-4" style="padding-right: 0px"> <div class="alert alert-info"><b>MANUFACTURE CODE</b>&emsp; &emsp;<i style="cursor: pointer;" onclick="sortTable(0)" class="fa fa-sort-amount-desc" aria-hidden="true"></i></div></div>
+              <div class="col-lg-4" style="padding-left: 0px;padding-right: 0px"> <div class="alert alert-info"><b>MANUFACTURE NAME </b>&emsp; &emsp;<i style="cursor: pointer;" onclick="sortTable(1)" class="fa fa-sort-amount-desc" aria-hidden="true"></i></div></div>
               <div class="col-lg-2" style="padding-left: 0px;padding-right: 0px;width: 150px"> <div class="alert alert-info"><b>ACTIVE FLAG</b></div></div>
               <div class="col-lg-2" style="padding-left: 0px;width: 216px"> <div class="alert alert-info"><b>ACTION</b></div></div>
                    
@@ -113,11 +113,7 @@
                         <div class="" >
                         
                         	<table id="genericInfoTable"  class="table table-striped table-bordered" style="border: 1px; height:10px;">
-                        		
-                        		
                         		<tbody>
-                        		
-                        		
 	                        		<!-- show database table in table row -->
 									<c:forEach var="t30004" items="${t30004}">
 									

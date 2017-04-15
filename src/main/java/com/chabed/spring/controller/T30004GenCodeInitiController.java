@@ -50,6 +50,32 @@ public class T30004GenCodeInitiController {
 			return "index";
 		}
 	
+		//request for T30006ManufactureCode page Page
+				@RequestMapping("/adminT30006ManuFacCodeIniti")
+				public String t30006ManufactureCode(Principal principal,Model model) {
+					log.info("call testion page");
+					
+					//get user name from principal
+					String loggedInUserName=principal.getName();
+					
+					// creating session if necessary 
+					if(ProgramSession.sesssionControll==0){
+						new HibenateConnection("open");
+						ProgramSession.sesssionControll++;
+					}
+					
+					if(t30004 == null){
+						log.info("collect table t30004");
+						t30004 = new T30004DAO().getT30004FullTable();
+					}
+					
+					
+					model.addAttribute("t30004", t30004);
+					
+					model.addAttribute("userName", loggedInUserName);
+					return "T30006_Manufacture_Code_Initialization";
+				}
+		
 	
 	//request for GenericCodeIni Page
 	@RequestMapping("/adminT30004GenCodeIniti")
